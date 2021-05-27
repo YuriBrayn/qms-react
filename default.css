@@ -1,0 +1,87 @@
+body {
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+  }
+  
+  .container {
+    margin: 80px auto;
+    width: 80%;
+  }
+  .container .widget span {
+    color: #aaa;
+    font-size: 12px;
+  }
+  .container .widget button {
+    /* padding: 5px 10px; */
+    font-size: 16px;
+    white-space: nowrap;
+    vertical-align: middle;
+    display: inline-block;
+    background: none;
+    border: none;
+    box-shadow: none;
+    cursor: pointer;
+    text-align: center;
+    font-weight: 500;
+    border-radius: 100%;
+    margin: 0;
+    outline: none;
+    margin-left: -1px;
+    width: 40px;
+    height: 40px;
+    border: 3px solid #eee;
+    transform: scale(1);
+    transition: background 0.2s ease-in, color 0.2s ease-in, border-color 0.2s ease-in, transform 0.2s cubic-bezier(0.5, 2, 0.5, 0.75);
+  }
+  .container .widget button.detractor-hover {
+    background: #F44336;
+    color: white;
+    border-color: #f55a4e;
+    transform: scale(1.05);
+  }
+  .container .widget button.passive-hover {
+    background: #F57C00;
+    color: white;
+    border-color: #ff8910;
+    transform: scale(1.05);
+  }
+  .container .widget button.promoter-hover {
+    background: #4CAF50;
+    color: white;
+    border-color: #5cb860;
+    transform: scale(1.05);
+  }
+  .container .widget.widget-sm {
+    width: 315px;
+    background: #eee;
+    border: 2px solid #ccc;
+    padding: 15px;
+    box-sizing: border-box;
+    position: relative;
+    padding-bottom: 30px;
+  }
+  .container .widget.widget-sm .positive-text, .container .widget.widget-sm .negative-text {
+    position: absolute;
+  }
+  .container .widget.widget-sm .positive-text {
+    right: 20px;
+    bottom: 10px;
+    text-align: right;
+  }
+  .container .widget.widget-sm .negative-text {
+    left: 20px;
+    bottom: 10px;
+    text-align: left;
+  }
+  .container .widget.widget-sm button {
+    border: none;
+    margin-left: -3px;
+    width: 27px;
+    height: 27px;
+    font-size: 12px;
+    font-weight: normal;
+    transform: scale(1) !important;
+    /* background-color: #ccc; */
+    border-radius: none;
+    text-align: center;
+    display: inline-block;
+  }
