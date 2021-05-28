@@ -1,13 +1,11 @@
-import 'bootstrap/dist/css/bootstrap.css'
-import styles from '../styles.module.css'
 import Image from 'next/image'
+import styles from '../styles.module.css'
+import 'bootstrap/dist/css/bootstrap.css'
 
 export default function Home () {
     return ( 
         <div className={styles.container}>
-            <div className={styles.logo}>
-                <Image src="https://www.altitude.com/wp-content/uploads/Logo-final-05.png" alt="altitude-enghouse" width={157} height={70} />
-            </div>
+            <Image className={styles.logo} src="/images/altitude-enghouse.png" width={157} height={70} />
             <div className={styles.title}>
                 <h4>Quality Management Suite (Net Promoter Score)</h4>   
             </div>
