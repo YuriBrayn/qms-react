@@ -1,6 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.css'
 import styles from '../styles.module.css'
-import ViewSource from '../components/view-source'
 import Image from 'next/image'
 
 export default function Home () {
