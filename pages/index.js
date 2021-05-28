@@ -1,11 +1,10 @@
-import Image from 'next/image'
 import styles from '../styles.module.css'
 import 'bootstrap/dist/css/bootstrap.css'
 
 export default function Home () {
     return ( 
         <div className={styles.container}>
-            <Image className={styles.logo} src="/images/altitude-enghouse.png" width={157} height={70} />
+            <img className={styles.logo} src='../images/altitude-enghouse.png' width='157' height='70' />
             <div className={styles.title}>
                 <h4>Quality Management Suite (Net Promoter Score)</h4>   
             </div>
