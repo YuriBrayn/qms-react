@@ -1,3 +1,4 @@
+import { useCallback, useState } from 'react'
 import styles from '../styles.module.css'
 import 'bootstrap/dist/css/bootstrap.css'
 
@@ -8,22 +9,44 @@ export default function Home () {
             <div className={styles.title}>
                 <h4>Quality Management Suite (Net Promoter Score)</h4>   
             </div>
-            <div className={styles.widget}> 
-                <div>
-                    <a>De 0 a 10, o quanto você recomendaria nossa empresa para um amigo ou familiar?</a>
-                </div>
-                <button className={styles.detractor}>0</button>
-                <button className={styles.detractor}>1</button>
-                <button className={styles.detractor}>2</button>
-                <button className={styles.detractor}>3</button>
-                <button className={styles.detractor}>4</button>
-                <button className={styles.detractor}>5</button>
-                <button className={styles.passive}>6</button>
-                <button className={styles.passive}>7</button>
-                <button className={styles.passive}>8</button>
-                <button className={styles.promoter}>9</button>
-                <button className={styles.promoter}>10</button>
-            </div>
+            <WidgetSurvey />
         </div> 
+    )
+}
+
+function WidgetSurvey(props){
+    return (
+        <div className={styles.widget}> 
+            <div className={styles.survey}> 
+                <a>De 0 a 10, o quanto você recomendaria nossa empresa para um amigo ou familiar?</a>
+            </div>
+            <Survey surveyName={0} surveyClass={styles.detractor} />
+            <Survey surveyName={1} surveyClass={styles.detractor} />
+            <Survey surveyName={2} surveyClass={styles.detractor} />
+            <Survey surveyName={3} surveyClass={styles.detractor} />
+            <Survey surveyName={4} surveyClass={styles.detractor} />
+            <Survey surveyName={5} surveyClass={styles.detractor} />
+            <Survey surveyName={6} surveyClass={styles.detractor} />
+            <Survey surveyName={7} surveyClass={styles.passive} />
+            <Survey surveyName={8} surveyClass={styles.passive} />
+            <Survey surveyName={9} surveyClass={styles.promoter} />
+            <Survey surveyName={10} surveyClass={styles.promoter} />
+        </div>   
+    )
+}
+
+function Survey(props){  
+    return (
+        <div className={styles.button}>
+            <button onClick={() => this.selectedValue(props.surveyName)} className={props.surveyClass}>{props.surveyName}</button>
+        </div>
+    )
+}
+
+function WidgetMessage(props){
+    return (
+        <div>
+            <a>Nota Escolhida: {props.surveyValue}</a> 
+        </div>
     )
 }

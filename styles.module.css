@@ -1,10 +1,9 @@
-  .container  {
+  .container {
     margin: 0.5%;
     width: 99.5%;
   }
   .logo {
     text-align: left;
-    vertical-align: middle;
     display: inside;    
   }
   .title {
@@ -12,17 +11,26 @@
     vertical-align: middle;
     margin-top: -0.5%;
   }
-  .widget {
+  .container .widget span {
+    width: max-content;
+  } 
+  .widget .survey {
     color: #777;
     text-align: center;    
     font-size: 15px;
-    margin-top: 15%;
+    margin-top: 10%;
+  }
+  .container .widget .button {
+    vertical-align: middle; 
+    text-align: center;   
+    margin-top: 0.15%;
+    margin-left: 32.5%;
   }
   .container .widget button {
-    font-size: 17px;
+    font-size: 15px;
     white-space: nowrap;
     vertical-align: middle;
-    display: inline-block;
+    float: left;
     background: none;
     border: none;
     box-shadow: none;
@@ -30,12 +38,13 @@
     text-align: center;
     font-weight: 600;
     border-radius: 100%;
-    margin: 5px;
+    margin: 0.1%;
     outline: none;
-    margin-left: -1px;
+    padding-left: -0.01%;
+    padding-top: -0.05%;
     width: 40px;
     height: 40px;
-    border: 4px solid #eee;
+    border: 2px solid #eee;
     transform: scale(1);
     transition: background 0.2s ease-in, color 0.2s ease-in, border-color 0.2s ease-in, transform 0.2s cubic-bezier(0.5, 2, 0.5, 0.75);
   }
@@ -56,4 +65,10 @@
     color: white;
     border-color: #5cb860;
     transform: scale(1.05);
+  }
+  .display-block {
+    display: block;
+  }  
+  .display-none {
+    display: none;
   }
